@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: ecommerce
-      MYSQL_ROOT_PASSWORD: 1357
+      MYSQL_ROOT_PASSWORD: root
     ports:
       - "3307:3306"
     volumes:
@@ -29,7 +29,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/ecommerce
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: 1357
+      SPRING_DATASOURCE_PASSWORD: root
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
     depends_on:
       db:
